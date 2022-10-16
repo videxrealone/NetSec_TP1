@@ -36,7 +36,7 @@ One of the most common methods to crack passwords is brute-force attacks.It is s
       c. Character frequency tables are used by the program for the sake of including the most probable used characters first.
       d. This method is so slow, yet it could identify those passwords having no existence in a dictionary.
       
-##Cracking linux user passwords using JTR
+## Cracking linux user passwords using JTR
 
 * **Creating users**
 
