@@ -1,16 +1,16 @@
 # Network Security - TP 1
 
-##Introduction##
+## Introduction
 
 ![image](https://user-images.githubusercontent.com/91763346/196042993-c25e5244-fafb-422c-92eb-9a92a66df4c4.png)
 
-**John the Ripper**
+* **John the Ripper**
 
 One of the best security tools which can be used to crack passwords is John the Ripper.
 
 Originally, “Cracker Jack” was developed for the sake of cracking Unix /etc/passwd files with the help of a dictionary. Then, John the Ripper came into existence afterward. Moreover, a “Pro” version was developed to include more features than the ordinary version. Especially that it has the capability to include and deal with many more hash types on which encrypted passwords are based in the first place. The Rapper’s commercial version is the most used among penetration testers for cracking passwords. This is essentially because of both its speed and great performance.
 
-**How does John the Ripper crack passwords?**
+* **How does John the Ripper crack passwords?**
 
 This field of science is basically perceived as cryptanalysis. In fact, there exist some vulnerabilities in passwords, which opens the gate for hackers to exploit in order to get the password back from its encrypted format following the use of a hashing method.
 
@@ -19,7 +19,7 @@ One of the most common methods to crack passwords is brute-force attacks.It is s
   . It is simply a method which mainly depends on performing a cross-checking against a cryptographic hash which is available for the password.
   . On the other hand, a password could be recovered through what is called ‘rainbow’ table. It is much faster and contains password hashes from which a password is guessed by a computer system.
   
-  **Common types of attacks used by JTR**
+* **Common types of attacks used by JTR**
   There are essentially two main types of attacks harnessed by John the Ripper in order for it to crack any password.
   
     1.Dictionary Attack
@@ -38,7 +38,7 @@ One of the most common methods to crack passwords is brute-force attacks.It is s
       
 ##Cracking linux user passwords using JTR
 
-**Creating users**
+* **Creating users**
 
 We will start by creating new users with different password complexity.
 
@@ -99,7 +99,7 @@ Next we will attempt to run John The Ripper using the command ***john [OPTIONS] 
 
 We can also add the --show to force JTR to immediatly show results.
 
-**Optimized Parameters**
+* **Final command with  optimized parameters**
 
 ```
 $ john mypasswd --show --format=crypt /usr/share/wordlists/rockyou.txt
@@ -120,7 +120,7 @@ A fast fix is to append the word isetcom to /usr/share/john/password.lst using t
 $ echo "isetcom" >> /usr/share/john/password.lst
 $ john mypasswd --show --format=crypt /usr/share/wordlists/rockyou.txt
 ```
-Upon relaunching JTR, we notice that the results take much less time than before.
+Upon relaunching JTR, we notice that the results take **much** less time than before.
 
 
 
